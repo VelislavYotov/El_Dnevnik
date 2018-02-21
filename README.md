@@ -1,7 +1,7 @@
 # El_Dnevnik
 
-#Ruby On Rails Back End
+Ruby On Rails Back End
 
-#MySQL DB
+MySQL DB
 
-#Angular Front End
+Angular Front End
