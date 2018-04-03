@@ -1,0 +1,13 @@
+class CreateSubjects < ActiveRecord::Migration[5.0]
+  def change
+    create_table :subjects do |t|
+
+      t.string :name
+      t.integer :class
+      t.string :type
+      t.belongs_to :teacher, index: true
+
+      t.timestamps
+    end
+  end
+end
