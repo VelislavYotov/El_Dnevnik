@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20180401061438) do
 
   create_table "subjects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.integer  "class"
+    t.integer  "clas"
     t.string   "type"
     t.integer  "teacher_id"
     t.datetime "created_at", null: false

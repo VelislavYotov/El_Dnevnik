@@ -10,8 +10,8 @@ class SubjectsController < ApplicationController
     @subject = Subject.new
     @subject[:teacher_id] = j['teacher_id']
     @subject[:name] = j['name']
-    @subject[:class] = j['class']
-    @subject[:type] = j['type']  
+    @subject[:clas] = j['clas']
+    @subject[:type] = j['type']
     @subject.save
 
 
@@ -21,7 +21,7 @@ class SubjectsController < ApplicationController
   def index
     @subjects = Subject.all
     @subjects = @subjects.teacher_id(params[:teacher_id]) if params[:teacher_id].present?
-    @subjects = @subjects.class(params[:class]) if params[:class].present?
+    @subjects = @subjects.clas(params[:clas]) if params[:clas].present?
     @subjects = @subjects.type(params[:type]) if params[:type].present?
 
     if @subjects.any?
@@ -48,7 +48,7 @@ class SubjectsController < ApplicationController
     if @subject.persisted?
         j = JSON.parse(request.raw_post)
         @subject[:name] = j['name']
-        @subject[:class] = j['class']
+        @subject[:clas] = j['clas']
         @subject[:type] = j['type']
         @subject[:teacher_id] = j['teacher_id']
 

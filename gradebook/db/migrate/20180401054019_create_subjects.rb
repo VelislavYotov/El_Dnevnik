@@ -3,7 +3,7 @@ class CreateSubjects < ActiveRecord::Migration[5.0]
     create_table :subjects do |t|
 
       t.string :name
-      t.integer :class
+      t.integer :clas
       t.string :type
       t.belongs_to :teacher, index: true
 
