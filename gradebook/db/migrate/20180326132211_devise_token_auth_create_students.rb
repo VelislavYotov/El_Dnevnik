@@ -38,8 +38,8 @@ class DeviseTokenAuthCreateStudents < ActiveRecord::Migration[5.0]
       t.string :nickname
       t.string :image
       t.string :email
-      t.string :class_number
-      t.string :class
+      t.string :clas_number
+      t.string :clas
       t.belongs_to :group
 
       ## Tokens

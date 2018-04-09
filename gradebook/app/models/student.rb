@@ -4,4 +4,5 @@ class Student < ActiveRecord::Base
           :recoverable, :rememberable, :trackable, :validatable,
           :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
+  before_save -> { skip_confirmation! }
 end

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
 
-  mount_devise_token_auth_for 'Teacher', at: 'teacher_auth'
+  mount_devise_token_auth_for 'Teacher', at: 'teacher/auth'
 
-  mount_devise_token_auth_for 'Admin', at: 'admin_auth'
+  mount_devise_token_auth_for 'Admin', at: 'admin/auth'
 
-  mount_devise_token_auth_for 'Student', at: 'student_auth'
+  mount_devise_token_auth_for 'Student', at: 'student/auth'
   as :student do
     # Define routes for Student within this block.
   #  resources :subjects, only: [:index, :show]

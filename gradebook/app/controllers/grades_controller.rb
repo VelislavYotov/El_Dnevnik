@@ -3,8 +3,8 @@ class GradesController < ApplicationController
    #devise_token_auth_group :member, contains: [:student, :admin, :teacher]
    #before_action :authenticate_member!, :except => [:show, :index]
    before_action :authenticate_student!, :only => [:show, :index]
-   before_action :authenticate_teacher!
-   before_action :authenticate_admin!
+   #before_action :authenticate_teacher!
+   #before_action :authenticate_admin!
 
   def create
     j = JSON.parse(request.raw_post)

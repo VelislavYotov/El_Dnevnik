@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(version: 20180401061438) do
     t.string   "nickname"
     t.string   "image"
     t.string   "email"
-    t.string   "class_number"
-    t.string   "class"
+    t.string   "clas_number"
+    t.string   "clas"
     t.integer  "group_id"
     t.text     "tokens",                 limit: 65535
     t.datetime "created_at",                                             null: false
