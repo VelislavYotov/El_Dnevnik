@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   delete '/subjectgroups/:id', to: 'subjectgroups#destroy'    #delete subjectgroup
   get '/subjectgroups/:id', to: 'subjectgroups#show'          #show one subjectgroup
 
-
+  put '/teacher_auth', to:'teacher#update'
+  put '/student_auth', to:'student#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

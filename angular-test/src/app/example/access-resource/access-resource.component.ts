@@ -17,7 +17,7 @@ export class AccessResourceComponent {
 
         this.output = null;
 
-        this._tokenService.get('private_resource').subscribe(
+        this._tokenService.get('subjects').subscribe(
             res => this.output      = res,
             error => this.output    = error
         );

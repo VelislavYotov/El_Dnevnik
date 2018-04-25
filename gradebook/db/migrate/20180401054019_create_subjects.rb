@@ -4,7 +4,7 @@ class CreateSubjects < ActiveRecord::Migration[5.0]
 
       t.string :name
       t.integer :clas
-      t.string :type
+      t.string :sub_type
       t.belongs_to :teacher, index: true
 
       t.timestamps

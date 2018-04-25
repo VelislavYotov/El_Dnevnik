@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
 
-  # devise_token_auth_group :member, contains: [:student, :admin, :teacher]
-  # before_action :authenticate_member!
+   #devise_token_auth_group :member, contains: [:student, :admin, :teacher]
+   before_action :authenticate_student!
 
   def create
     j = JSON.parse(request.raw_post)
