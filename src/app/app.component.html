@@ -1,17 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:left">
-  <h1>
-    {{ title }}!
-  </h1>
+<div class="header">
+    <div class="container">
+
+        <h1 class="display-4">Angular2-Token</h1>
+
+        <p>
+            This is an example for Angular2-Token. Angular2-Token is a token based authentication service for Angular2 with multiple user support. It works best with the devise token auth gem for Rails.
+        </p>
+
+        <a href="https://github.com/neroniaky/angular2-token">
+            <button type="button" class="btn btn-secondary">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                Github
+            </button>
+        </a>
+    </div>
 </div>
-<h2 ng-hide="1">Account info:</h2>
-<label>Username <input type="Username" name=""></label>
-<br>
-<br>
-<label>Password <input type="Password" name=""></label>
-<br>
-<br>
-<button ngClick="count=1" routerLink="/user">Log in!</button>
-<br>
-<br>
+
 <router-outlet></router-outlet>

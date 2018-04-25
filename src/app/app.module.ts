@@ -1,26 +1,30 @@
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { GradesComponent } from './grades/grades.component';
-import { RouterModule, Routes} from '@angular/router';
+import { Angular2TokenService, A2tUiModule } from 'angular2-token';
 
+import {
+    AppComponent,
+    ExampleModule,
+    RestrictedModule,
+    routes
+} from './';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserComponent,
-    GradesComponent
-  ],
-  imports: [
-  BrowserModule,
-  RouterModule.forRoot([
-    {path:'user', component: UserComponent},
-    {path:'grades', component: GradesComponent}
-    ]),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [
+        routes,
+        BrowserModule,
+        HttpModule,
+        ExampleModule,
+        RestrictedModule,
+        A2tUiModule
+    ],
+    providers: [
+        Angular2TokenService
+    ],
+    declarations: [ AppComponent ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }

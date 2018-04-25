@@ -1,0 +1,50 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <div class="card card-block card-success card-inverse">
+                <h4 class="card-title">Current User Status</h4>
+
+                <div class="row current-user">
+                    <div class="col-md-4">
+                        <p><b>Signed In?</b> {{tokenService.currentUserData != null}} </p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><b>Email:</b> {{tokenService.currentUserData?.email}} </p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><b>UserType:</b> {{tokenService.currentUserType}} </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <register class="row"></register>
+
+    <sign-in class="row"></sign-in>
+
+    <sign-in-oauth class="row"></sign-in-oauth>
+
+    <access-resource class="row"></access-resource>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-block">
+                <h4 class="card-title">Can Activate</h4>
+                <a routerLink="/restricted" routerLinkActive="active">
+                    <button type="submit" class="btn btn-primary">
+                        Go To Restricted Site
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <change-password class="row"></change-password>
+
+    <validate-token class="row"></validate-token>
+
+    <sign-out class="row"></sign-out>
+</div>
